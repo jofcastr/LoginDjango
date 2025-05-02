@@ -128,3 +128,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AXES_FAILURE_LIMIT = 5
 RECAPTCHA_SITE_KEY = '6LdnEB8rAAAAAIoRwz4efh0jUgVaizuam51HY4hJ'
 RECAPTCHA_SECRET_KEY = '6LdnEB8rAAAAAJEZNcVVgwRTSPV3Qco0bnoePksB'
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql', # Cambia esto por tu motor de BD
+        'NAME': 'postgres',  # Cambia esto por el nombre de tu BD
+        'USER': 'postgres',    # Cambia esto por tu usuario de BD              
+        'PASSWORD': 'password',  # Cambia esto por tu contraseña de BD 
+        'HOST': 'localhost',    # Cambia esto por la dirección de tu servidor de BD (localhost si es local)              
+        'PORT': '5432', # Cambia esto por el puerto de tu servidor de BD (5432 es el puerto por defecto de PostgreSQL)
+        'OPTIONS': {
+            'options': '-c search_path=devseguro'  # devseguro, CAMBIA ESTO POR EL NOMBRE DE TU ESQUEMA
+        },                       
+    }
+}
